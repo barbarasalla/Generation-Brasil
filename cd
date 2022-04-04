@@ -1,0 +1,125 @@
+[33mcommit 5597507e16d864cda97d83266d9be878f939028b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 16:15:41 2022 -0300
+
+    rename folder
+
+[33mcommit cad4949adc578817b09ffbccd1b1785442cdb354[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 16:05:11 2022 -0300
+
+    excluir arquivo 'cd'
+
+[33mcommit 768647c3a08c89c35456ad2ae0f45cac923e7f17[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 15:57:02 2022 -0300
+
+    Q6: Escrever um programa que receba vários números inteiros no teclado. E no final imprimir a média dos números múltiplos de 3. Para sair digitar 0(zero).(DO...WHILE)
+
+[33mcommit dbae881e61d5fd23f4b219dc8b3f1bf1bfbe826f[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 15:48:01 2022 -0300
+
+    atualizacao
+
+[33mcommit 5b135aae729637737eaad8390325ec1be704b949[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 15:09:19 2022 -0300
+
+    Q6: Escrever um programa que receba vários números inteiros no teclado. E no final imprimir a média dos números múltiplos de 3. Para sair digitar 0(zero).(DO...WHILE)
+
+[33mcommit 5df2183dfecd952cb1798920096428e020552266[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 15:08:15 2022 -0300
+
+    Q5: Crie um programa que leia um número do teclado até que encontre um número igual a zero. No final, mostre a soma dos números digitados.(DO...WHILE)
+
+[33mcommit 465bf965210a58e0e6fce37054255f6edce8ebcb[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 15:07:16 2022 -0300
+
+    Q3
+
+[33mcommit 0c0aabbd27f503ded30f54f092a7c281a905d31e[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 14:59:49 2022 -0300
+
+    Q3: Solicitar a idade de várias pessoas e imprimir: Total de pessoas com menos de 21 anos. Total de pessoas com mais de 50 anos. O programa termina quando idade for =-99. (WHILE)
+
+[33mcommit 676789f4ad43e146f081e3890dcead1fad0e5549[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 14:58:14 2022 -0300
+
+    Q2: Ler 10 números e imprimir quantos são pares e quantos são ímpares. (usar FOR)
+
+[33mcommit 0e5bfabba42143304957674e08bf2e6c37cd87a7[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Mon Apr 4 14:56:17 2022 -0300
+
+    Q1: Informar todos os números de 1000 a 1999 que quando divididos por 11 obtemos resto = 5. (Usar For)
+
+[33mcommit 940805e4afabe062e6d52998359ef88a78537922[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 21:11:02 2022 -0300
+
+    Q.5: Faça um sistema que leia as 3 notas de um aluno e calcule a média final deste aluno. Considerar que a média é ponderada e que o peso das notas é: 2,3 e 5, respectivamente.
+
+[33mcommit 74d0e4bfaaee23163713b82e9963b80da0bdf5a5[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 21:09:42 2022 -0300
+
+    Q.4: Escreva  um sistema que leia três números inteiros e positivos (A, B, C) e calcule a expressão matemática definida
+
+[33mcommit fef349d2d4715883805f9ada87ebc23fd0243a1a[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 21:07:34 2022 -0300
+
+    Q.3: Faça um sistema que leia o tempo de duração de um evento em uma fábrica expressa em segundos e mostre-o expresso em horas, minutos e segundos.
+
+[33mcommit f84b01b96a63dfe7e63901451bb55aacafd34ec5[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 20:10:58 2022 -0300
+
+    Q.2: Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias.
+
+[33mcommit 7cd32067eb0163f18e18f1249f17374ea4931572[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 20:09:49 2022 -0300
+
+    Q.1: Faça um sistema que leia a idade de uma pessoa expressa em anos, meses e dias e mostre-a expressa apenas em dias.
+
+[33mcommit fc8b4314bfb4d00ffb6889c0955c250357b3a332[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 20:06:45 2022 -0300
+
+    rename folder
+
+[33mcommit c1d008e03eaefd86300fcd1cb57bb43c60891fb3[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 20:01:00 2022 -0300
+
+    Q.4: Faça um programa em que permita a entrada de um número qualquer e exiba se este número é par ou ímpar. Se for par exiba também a raiz quadrada do mesmo; se for ímpar exiba o número elevado ao quadrado.
+
+[33mcommit 21e3a70b4ee0822ae556922b82397522775c4d40[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 19:59:49 2022 -0300
+
+    Q.3: Faça um programa que receba a idade de uma pessoa e mostre na saída em qual categoria ela se encontra(Infantil:10-14; Juvenil 15-17; Adulto: 18-25)
+
+[33mcommit 8512a7284583ef92b91adecb2ee8d229dcc59960[m
+Author: Barbara Salla <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 19:55:26 2022 -0300
+
+    Q.2: Faça um programa que entre com três números e coloque em ordem crescente.
+
+[33mcommit 61f4a7247311761227e0fc42e3a142ab1f2c026c[m
+Author: unknown <barbara.msalla@gmail.com>
+Date:   Fri Apr 1 19:43:48 2022 -0300
+
+    Q.1: Faça um programa que receba três inteiros e diga qual deles é o maior
+
+[33mcommit 8fdce738b0f4012d7b4af7106a04e440d0d19a3c[m
+Author: Bárbara Salla <89363562+barbarasalla@users.noreply.github.com>
+Date:   Fri Apr 1 19:37:35 2022 -0300
+
+    Create README.md
