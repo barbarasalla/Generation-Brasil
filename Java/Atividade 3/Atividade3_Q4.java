@@ -13,6 +13,7 @@ public class Atividade3_Q4 {
 		int op;
 		float matrizSoma[][]=new float[2][2];
 		float matrizSubt[][]=new float[2][2];
+		boolean sair=true;
 		
 		for(int i=0; i<2; i++) {
 			for(int j=0; j<2;j++) {
@@ -22,6 +23,8 @@ public class Atividade3_Q4 {
 				matrizB[i][j]=in.nextFloat();
 			}
 		}
+		
+		while (sair==true){
 			System.out.println("-------------------MENU-----------------------");
 			System.out.println("[1] Somar as duas matrizes\n[2] Subtrair a primeira matriz da segunda\n[3] Adicionar uma constante as duas matrizes\n[4] Imprimir as matrizes");
 			op= in.nextInt();
@@ -84,6 +87,8 @@ public class Atividade3_Q4 {
 				break;
 				default:
 					System.out.println("\nPrograma Finalizado");
+					sair=false;
 			}
+		}
 	}
 }
