@@ -8,18 +8,18 @@ public class Atividade3_Q4 {
 		// TODO Auto-generated method stub
 		Scanner in= new Scanner (System.in);
 		
-		int matrizA[][]= new int[2][2];
-		int matrizB[][]= new int[2][2];
+		float matrizA[][]= new float[2][2];
+		float matrizB[][]= new float[2][2];
 		int op;
-		int matrizSoma[][]=new int[2][2];
-		int matrizSubt[][]=new int[2][2];
+		float matrizSoma[][]=new float[2][2];
+		float matrizSubt[][]=new float[2][2];
 		
 		for(int i=0; i<2; i++) {
 			for(int j=0; j<2;j++) {
 				System.out.println("Digite o valor da posição ("+i+", "+j+") da Matriz A: ");
-				matrizA[i][j]=in.nextInt();
+				matrizA[i][j]=in.nextFloat();
 				System.out.println("Digite o valor da posição ("+i+", "+j+") da Matriz B: ");
-				matrizB[i][j]=in.nextInt();
+				matrizB[i][j]=in.nextFloat();
 			}
 		}
 			System.out.println("-------------------MENU-----------------------");
@@ -46,7 +46,7 @@ public class Atividade3_Q4 {
 				break;
 				case 3:
 					System.out.print("Digite uma constante para somar nas matrizes: ");
-					int constante= in.nextInt();
+					float constante= in.nextFloat();
 					System.out.println("\nMatriz A somada a constante: ");
 					for(int i=0; i<2; i++) {
 						for(int j=0; j<2;j++) {
