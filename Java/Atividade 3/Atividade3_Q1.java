@@ -11,7 +11,7 @@ public class Atividade3_Q1 {
 		System.out.println("A soma dos valores da posição A0 A1 e A5 foi "+soma);
 		
 		for (int i=0; i<6; i++) {
-			A[4]=100;
+			A[3]=100;
 			System.out.println(A[i]);
 		}		
 		
