@@ -26,7 +26,7 @@ public class Atividade3_Q4 {
 		
 		while (sair==true){
 			System.out.println("-------------------MENU-----------------------");
-			System.out.println("[1] Somar as duas matrizes\n[2] Subtrair a primeira matriz da segunda\n[3] Adicionar uma constante as duas matrizes\n[4] Imprimir as matrizes");
+			System.out.println("[1] Somar as duas matrizes\n[2] Subtrair a primeira matriz da segunda\n[3] Adicionar uma constante as duas matrizes\n[4] Imprimir as matrizes\n[0] Para Sair");
 			op= in.nextInt();
 			switch(op){
 				case 1:
@@ -85,9 +85,11 @@ public class Atividade3_Q4 {
 						System.out.print("\n");
 					}
 				break;
-				default:
-					System.out.println("\nPrograma Finalizado");
+				case 0:
+					System.out.println("\nPrograma Finalizado.");
 					sair=false;
+				default:
+					System.out.println("\nOpção Inválida.");
 			}
 		}
 	}
