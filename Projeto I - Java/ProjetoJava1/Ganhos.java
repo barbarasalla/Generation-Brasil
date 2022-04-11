@@ -12,7 +12,6 @@ public class Ganhos {
 	private double ganhosTotaisDias=0;
 	private double receitaDia=0;
 	private double gorjetaDia=0;
-	private double ganhosTotais=0;
 	private double receitaTotal=0;
 	private double gorjetaTotal=0;
 	private int ContCorrida;	
@@ -28,7 +27,7 @@ public class Ganhos {
 	}
 
 	public void setReceita(double receita) {
-		this.receita += receita;
+		this.receita = receita;
 		AdicionarCorrida();
 		setReceitaDia(getReceitaDia()+this.receita);
 	}
@@ -38,7 +37,7 @@ public class Ganhos {
 	}
 
 	public void setGorjeta(double gorjeta) {
-		this.gorjeta += gorjeta;
+		this.gorjeta = gorjeta;
 		setGorjetaDia(getGorjetaDia()+this.gorjeta);
 	}
 	
@@ -83,16 +82,8 @@ public class Ganhos {
 
 	public void setGanhosTotaisDias(double ganhosTotaisDias) {
 		this.ganhosTotaisDias = ganhosTotaisDias;
-		setGanhosTotais(getGanhosTotais()+ganhosTotaisDias);
 	}
 
-	public double getGanhosTotais() {
-		return ganhosTotais;
-	}
-
-	public void setGanhosTotais(double ganhosTotais) {
-		this.ganhosTotais = ganhosTotais;
-	}
 	
 	public void totalizarGanhosDia() {
 		setGanhosTotaisDias(getReceitaDia()+getGorjetaDia());
@@ -101,6 +92,8 @@ public class Ganhos {
 	public void ZerarGanhos() {
 		this.receita=0;
 		this.gorjeta=0;
+		this.gorjetaDia=0;
+		this.receitaDia=0;
 		this.ganhosTotaisDias=0;
 	}
 

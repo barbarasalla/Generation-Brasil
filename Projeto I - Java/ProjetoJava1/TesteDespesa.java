@@ -38,9 +38,8 @@ do {
 			cadastro.getLogin();
 			cadastro.getSenhaConfirma();
 			cadastro.bemVinde();
-			
-	
 		}
+		
 		else if(x==2)
 		{
 			cadastro.facaLogin();
@@ -60,16 +59,20 @@ do {
 		System.out.println("-------------------------MENU PRINCIPAL--------------------------\n\n [1] INICIAR SESSÃO DE REGISTRO\n [2] MENU CONTROLE \n [3] FAZER LOG OFF\n-------------------------------------------------");
 		System.out.print("Digite sua escolha: ");
 		opIniciar=leia.nextInt();
+		
 			if (opIniciar==1) {
 				res.ZerarResultados();	//Zerando Resultados Total do DIA no RESULTADO
 				Des.ZerarDespesas();	//Zerando Despesa Total do DIA
 				gan.ZerarGanhos();		//Zerando Ganhos Total do DIA
+				
+				System.out.println(Des.getTotDespesaDia());					//Calculando DESPESA DIA
+				System.out.println(res.getTotalDespesasDia());				
 			}
 		switch(opIniciar) 
 		{
 		
 			case 1:
-				System.out.println("\nLEMBRE-SE DE ENCERRAR A SESSÃO QUANDO O SEU DIA DE TRABALHO FINALIZAR..\n");
+				
 				System.out.println("\nSESSÃO INICIADA... Dirija sempre com cuidado!");
 				//Menu interativo com usuário	
 				
@@ -94,7 +97,9 @@ do {
 						case 2:
 							Des.menuDespesa();
 							break;
-					
+						case 3:
+							System.out.print("\nAo encerrar sessão o controle diário será encerrado. Tem certeza que deseja fazer isso? ");
+							
 						default:
 							System.out.print("\nOpção invalido! Digite novamente: ");			
 							System.out.println("\n-----------------------------------------------");		
@@ -105,19 +110,20 @@ do {
 				}while(menu != 3);
 				
 				
-				Des.totalizarDespesaDia();				
-				totDespesaDia= Des.getTotDespesaDia(); 
-				res.setTotalDespesasDia(totDespesaDia);	//Aplicando o total de DESPESA do DIA na Classe RESULTADO
+				Des.totalizarDespesaDia();							//Calculando DESPESA DIA
+				res.setTotalDespesasDia(Des.getTotDespesaDia());	//Aplicando o total de DESPESA do DIA na Classe RESULTADO
+				res.TotalDespesa();									//Calculando Despesa Total no RESULTADO
 				
-				totGanhosDia = gan.getReceitaDia();
-				res.setTotalReceitasDia(totGanhosDia);	//Aplicando o total de GANHOS do DIA na Classe RESULTADO
 				
-				res.CalculoLucroDia();
-				LucroDia = res.getLucrosLiquidos();	//Aplicando o total de LUCRO do DIA em variavel
+				gan.totalizarGanhosDia();							//Calculando GANHOS DIA
+				totGanhosDia = gan.getGanhosTotaisDias();
+				res.setTotalReceitasDia(totGanhosDia);				//Aplicando o total de GANHOS do DIA na Classe RESULTADO
+				res.CalcularGanhosTotal();
 				
-				Des.CalcularDespesaTotal();	//Calculando Despesa Total
-				res.TotalDespesa();			//Calculando Despesa Total no RESULTADO
-
+				res.CalculoLucroDia();								//Calculando LUCROS DIA	
+				res.CalculoLucroTotal();							//Calcular Lucro Total
+				
+				
 				break;
 				
 				//FIM MENU FLUXO

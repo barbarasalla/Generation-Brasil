@@ -12,12 +12,12 @@ public class Despesas {
 		private double Limpeza;
 		private double Alimentacao;
 		private double OutrasDespesas;
-		private double totDespesaDia;
-		private double CombustivelTotal;
-		private double ManutencaoTotal;
-		private double LimpezaTotal;
-		private double AlimentacaoTotal;
-		private double OutrasDespesasTotal;
+		private double totDespesaDia=0;
+		private double CombustivelDia=0;
+		private double ManutencaoDia=0;
+		private double LimpezaDia=0;
+		private double AlimentacaoDia=0;
+		private double OutrasDespesasDia=0;
 		private double DespesaTotal=0;
 
 
@@ -31,136 +31,148 @@ public class Despesas {
 		this.totDespesaDia= totDespesaDia;	
 	}
 
-
+	//CONTABILIDADE ENTRADA
+	
 	public double getCombustivel() {
 		return Combustivel;
 	}
 
-
 	public void setCombustivel(double combustivel) {
 		this.Combustivel = combustivel;
+		setCombustivelDia(getCombustivelDia()+this.Combustivel);
 	}
-
 
 	public double getManutencao() {
 		return Manutencao;
 	}
 
-
 	public void setManutencao(double manutencao) {
-		Manutencao = manutencao;
+		this.Manutencao = manutencao;
+		setManutencaoDia(getManutencaoDia()+this.Manutencao);
 	}
-
-
 
 	public double getLimpeza() {
 		return Limpeza;
 	}
 
-
 	public void setLimpeza(double limpeza) {
-		Limpeza = limpeza;
+		this.Limpeza = limpeza;
+		setLimpezaDia(getLimpezaDia()+this.Limpeza);
 	}
-
 
 	public double getAlimentacao() {
 		return Alimentacao;
 	}
 
-
-
 	public void setAlimentacao(double alimentacao) {
 		Alimentacao = alimentacao;
+		setAlimentacaoDia(getAlimentacaoDia()+this.Alimentacao);
 	}
-
 
 	public double getOutrasDespesas() {
 		return OutrasDespesas;
 	}
 
-
 	public void setOutrasDespesas(double outrasDespesas) {
 		OutrasDespesas = outrasDespesas;
+		setOutrasDespesasDia(getOutrasDespesasDia()+this.OutrasDespesas);
 	}
 
-
+	// CONTABILIDADE DIA
+	
 	public double getTotDespesaDia() {
 		return totDespesaDia;
 	}
 
-
 	public void setTotDespesaDia(double totDespesaDia) {
 		this.totDespesaDia = totDespesaDia;
 	}
+
+	public double getCombustivelDia() {
+		return CombustivelDia;
+	}
+
+
+	public void setCombustivelDia(double combustivelDia) {
+		CombustivelDia = combustivelDia;
+	}
+
+
+	public double getManutencaoDia() {
+		return ManutencaoDia;
+	}
+
+
+	public void setManutencaoDia(double manutencaoDia) {
+		ManutencaoDia = manutencaoDia;
+	}
+
+
+	public double getLimpezaDia() {
+		return LimpezaDia;
+	}
+
+
+	public void setLimpezaDia(double limpezaDia) {
+		LimpezaDia = limpezaDia;
+	}
+
+
+	public double getAlimentacaoDia() {
+		return AlimentacaoDia;
+	}
+
+
+	public void setAlimentacaoDia(double alimentacaoDia) {
+		AlimentacaoDia = alimentacaoDia;
+	}
+
+
+	public double getOutrasDespesasDia() {
+		return OutrasDespesasDia;
+	}
+
+
+	public void setOutrasDespesasDia(double outrasDespesasDia) {
+		OutrasDespesasDia = outrasDespesasDia;
+	}
+
 	
-	public void totalizarDespesaDia() {
-		setTotDespesaDia(getCombustivel()+getOutrasDespesas()+getAlimentacao()+getLimpeza()+getManutencao());
-	}
-
-	public double getCombustivelTotal() {
-		return CombustivelTotal;
-	}
-	
-	public void setCombustivelTotal(double combustivelTotal) {
-		CombustivelTotal = combustivelTotal;
-	}
-
-	public double getManutencaoTotal() {
-		return ManutencaoTotal;
-	}
-
-	public void setManutencaoTotal(double manutencaoTotal) {
-		ManutencaoTotal = manutencaoTotal;
-	}
-
-	public double getLimpezaTotal() {
-		return LimpezaTotal;
-	}
-
-	public void setLimpezaTotal(double limpezaTotal) {
-		LimpezaTotal = limpezaTotal;
-	}
-
-	public double getAlimentacaoTotal() {
-		return AlimentacaoTotal;
-	}
-
-	public void setAlimentacaoTotal(double alimentacaoTotal) {
-		AlimentacaoTotal = alimentacaoTotal;
-	}
-
-	public double getOutrasDespesasTotal() {
-		return OutrasDespesasTotal;
-	}
-
-	public void setOutrasDespesasTotal(double outrasDespesasTotal) {
-		OutrasDespesasTotal = outrasDespesasTotal;
-	}
-
+	//CONTABILIDADE TOTAL
 
 	public double getDespesaTotal() {
 		return DespesaTotal;
 	}
 
-
 	public void setDespesaTotal(double DespesaTotal) {
 		this.DespesaTotal = DespesaTotal;
 	}
 	
+	//METODOS CALCULO
+	
+	public void totalizarDespesaDia() {
+		setTotDespesaDia(getCombustivelDia()+getOutrasDespesasDia()+getAlimentacaoDia()+getLimpezaDia()+getManutencaoDia());
+	}
 	
 	public void CalcularDespesaTotal () 
 	{
 		setDespesaTotal(getTotDespesaDia()+getDespesaTotal());
 	}
+	
+	//METODO ZERAR
 
 	public void ZerarDespesas() {
-		this.Combustivel = 0;
-		this.Manutencao = 0;
-		this.Limpeza = 0;
-		this.Alimentacao = 0;
-		this.OutrasDespesas = 0;
-		this.totDespesaDia= 0;
-		
+		setTotDespesaDia(0);
+		setCombustivel(0);
+		setManutencao(0);
+		setLimpeza(0);
+		setAlimentacao(0);
+		setOutrasDespesas(0);
+		setCombustivelDia(0);
+		setManutencaoDia(0);
+		setLimpezaDia(0);
+		setAlimentacaoDia(0);
+		setOutrasDespesasDia(0);	
 	}
 	
 	

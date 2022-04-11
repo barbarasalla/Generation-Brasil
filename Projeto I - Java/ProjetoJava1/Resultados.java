@@ -6,7 +6,9 @@ public class Resultados extends Contador {
 	
 	Scanner leia= new Scanner(System.in);
 	
-	private double totalReceitasDia, totalDespesasDia, lucrosLiquidosDia, kmRodadosDia, combustivelGastoDia, totalReceitas, totalDespesas, lucrosLiquidos, kmRodados, combustivelGasto, lucroSemana, lucroMes;
+	private double totalReceitasDia, totalDespesasDia, lucrosLiquidosDia, kmRodadosDia, combustivelGastoDia, 
+	totalReceitas, totalDespesas, lucrosLiquidos, kmRodados, combustivelGasto, lucroSemana, lucroMes, 
+	despesaSemana, despesaMes, receitaSemana, receitaMes;
 		
 	public Resultados(double totalReceitasDia, double totalDespesasDia, double lucrosLiquidosDia, double kmRodadosDia, double combustivelGastoDia) {
 		
@@ -17,7 +19,7 @@ public class Resultados extends Contador {
 			this.combustivelGastoDia = combustivelGastoDia;
 	}	
 
-//RESULTADO DIA:
+	//RESULTADO DIA:
 
 	public double getTotalReceitasDia() {
 		return totalReceitasDia;
@@ -41,9 +43,36 @@ public class Resultados extends Contador {
 
 	public void setLucrosLiquidosDia(double lucrosLiquidosDia) {
 		this.lucrosLiquidosDia = lucrosLiquidosDia;
-		setLucrosLiquidos(getLucrosLiquidos()+this.lucrosLiquidosDia);
+	}
+	
+	//RESULTADO TOTAL:
+
+	public double getTotalReceitas() {
+		return totalReceitas;
 	}
 
+	public void setTotalReceitas(double totalReceitas) {
+		this.totalReceitas = totalReceitas;
+	}
+
+	public double getTotalDespesas() {
+		return totalDespesas;
+	}
+
+	public void setTotalDespesas(double totalDespesas) {
+		this.totalDespesas = totalDespesas;
+	}
+
+	public double getLucrosLiquidos() {
+		return lucrosLiquidos;
+	}
+
+	public void setLucrosLiquidos(double lucrosLiquidos) {
+		this.lucrosLiquidos = lucrosLiquidos;
+	}
+	
+	//CONTROLE KM (DIA, TOTAL, SEMANA E MES)
+	
 	public double getKmRodadosDia() {
 		return kmRodadosDia;
 	}
@@ -58,40 +87,6 @@ public class Resultados extends Contador {
 
 	public void setCombustivelGastoDia(double combustivelGastoDia) {
 		this.combustivelGastoDia = combustivelGastoDia;
-	}
-
-	
-	public void ZerarResultados() {
-		this.totalReceitasDia = 0;
-		this.totalDespesasDia = 0;
-		this.lucrosLiquidosDia = 0;
-		this.kmRodadosDia = 0;
-		this.combustivelGastoDia = 0;
-	}
-//RESULTADO TOTAL:
-
-	public double getTotalReceitas() {
-		return totalReceitas;
-	}
-
-	public void setTotalReceitas(double totalReceitas) {
-		this.totalReceitas += totalReceitas;
-	}
-
-	public double getTotalDespesas() {
-		return totalDespesas;
-	}
-
-	public void setTotalDespesas(double totalDespesas) {
-		this.totalDespesas += totalDespesas;
-	}
-
-	public double getLucrosLiquidos() {
-		return lucrosLiquidos;
-	}
-
-	public void setLucrosLiquidos(double lucrosLiquidos) {
-		this.lucrosLiquidos += lucrosLiquidos;
 	}
 
 	public double getKmRodados() {
@@ -110,6 +105,8 @@ public class Resultados extends Contador {
 		this.combustivelGasto = combustivelGasto;
 	}
 	
+	//CONTROLE TEMPORAL (SEMANA E MES)
+	
 	public double getLucroSemana() {
 		return lucroSemana;
 	}
@@ -125,14 +122,68 @@ public class Resultados extends Contador {
 	public void setLucroMes(double lucroMes) {
 		this.lucroMes = getLucrosLiquidos()/getMeses();
 	}
-//METODOS:	
+		
+
+	public double getDespesaSemana() {
+		return despesaSemana;
+	}
+
+	public void setDespesaSemana(double despesaSemana) {
+		this.despesaSemana = getTotalDespesas()/getSemanas();
+	}
+
+	public double getDespesaMes() {
+		return despesaMes;
+	}
+
+	public void setDespesaMes(double despesaMes) {
+		this.despesaMes = getTotalDespesas()/getMeses();
+	}
+
+	public double getReceitaSemana() {
+		return receitaSemana;
+	}
+
+	public void setReceitaSemana(double receitaSemana) {
+		this.receitaSemana = getTotalReceitas()/getSemanas();
+	}
+
+	public double getReceitaMes() {
+		return receitaMes;
+	}
+
+	public void setReceitaMes(double receitaMes) {
+		this.receitaMes = getTotalReceitas()/getMeses();
+	}
+	
+	//METODOS CALCULOS
 
 	public void TotalDespesa() {
 		setTotalDespesas(getTotalDespesasDia()+getTotalDespesas());
 	}
 	
+	public void CalcularGanhosTotal() {
+		setTotalReceitas(getTotalReceitasDia()+getTotalReceitas());
+	}
+	
 	public void CalculoLucroDia() {
 		setLucrosLiquidosDia(getTotalReceitasDia()-getTotalDespesasDia());
+	}
+	
+	public void CalculoLucroTotal() {
+		setLucrosLiquidos(getLucrosLiquidosDia()+getLucrosLiquidos());
+	}
+	
+	//ZERAR RESULTADOS DIA
+	
+	public void ZerarResultados() {
+
+		setLucrosLiquidosDia(0);
+		setTotalReceitasDia(0);
+		setTotalDespesasDia(0);
+		this.totalDespesasDia=0;
+		this.kmRodadosDia = 0;
+		this.combustivelGastoDia = 0;
 	}
 	
 	public void menuResultado() {
@@ -141,7 +192,7 @@ public class Resultados extends Contador {
 		
 		do {
 		System.out.println("---------Controle de fluxo---------");			
-		System.out.println("\n[1] Fluxo do dia \n[2] Fluxo semanal \n[3] Fluxo mensal \n[4] Balanço Total \n[5] Sair");
+		System.out.println("\n[1] Fluxo do dia \n[2] Fluxo semanal \n[3] Fluxo mensal \n[4] Balanço Total \n[5] Sair dos Resultados");
 		System.out.print("\nSelecione uma opção: ");
 		opRes= leia.nextInt();
 		
@@ -149,42 +200,81 @@ public class Resultados extends Contador {
 		{
 			case 1:
 				System.out.println("\n--------Fluxo Do Dia---------\n"			
-						+ "\nGanhos Totais: "+getTotalDespesasDia()+"\nDespesas Totais: "+getTotalReceitasDia()+"\nLucro Total Do Dia: "+getLucrosLiquidosDia()+"\nKMs Rodados: ");
+						+ "\nGanhos Totais: "+getTotalReceitasDia()+"\nDespesas Totais: "+getTotalDespesasDia()+"\nLucro Total Do Dia: "+getLucrosLiquidosDia()+"\nKMs Rodados: ");
 				
 				System.out.println("\n");
 				System.out.println("	TIPOS	|	VALORES	|");
-				System.out.println("_________________________________________________");
+				System.out.println("________________________________");
 				System.out.println("Ganhos Totais	|	"+getTotalReceitasDia()+"	|");
-				System.out.println("_________________________________________________");
+				System.out.println("________________________________");
 				System.out.println("Despesas Totais	|	"+getTotalDespesasDia()+"	|");
-				System.out.println("_________________________________________________");
-				System.out.println("KMs		|	");
-				System.out.println("_________________________________________________");
-				System.out.println("		|");
-				System.out.println("_________________________________________________");
+				System.out.println("_______________________________");
+				System.out.println("Lucros Totais	|	"+getLucrosLiquidosDia()+"	|");
+				System.out.println("_______________________________");
+				System.out.println("KMs Rodados	|	");
+				System.out.println("_______________________________");
+				System.out.println("Preço/KM	|	");
+				System.out.println("___________________________");
 				
 				break;
+				
 			case 2:
 				System.out.println("------ Valores Médios Semanal-------"			
-						+ "\nGanhos Totais: "+getTotalDespesas()/getSemanas()+"\nDespesas Totais: "+getTotalReceitas()/getSemanas()+"\nLucro Total Do Dia: "+getLucrosLiquidos()/getSemanas()+"\nKMs Rodados: ");
-				break;
-			case 3:
-				System.out.println("------Fluxo Médio Mensal-------"			
-						+ "\nGanhos Totais: "+getTotalDespesas()/getMeses()+"\nDespesas Totais: "+getTotalReceitas()/getMeses()+"\nLucro Total Do Dia: "+getLucroMes()+"\nKMs Rodados: ");
-				break;
-			case 4:
+						+ "\nGanhos Totais: "+getTotalReceitas()/getSemanas()+"\nDespesas Totais: "+getTotalDespesas()/getSemanas()+"\nLucro Total Do Dia: "+getLucrosLiquidos()/getSemanas()+"\nKMs Rodados: ");
+				
 				System.out.println("\n");
 				System.out.println("		|	DIA	|	SEMANA		|	MÊS	|");
 				System.out.println("________________________________________________________________________");
-				System.out.println("Ganhos Totais	|	"+getTotalReceitasDia()+"	|			|		|");
+				System.out.println("Ganhos Totais	|	"+getReceitaSemana()+"	|			|		|");
 				System.out.println("________________________________________________________________________");
-				System.out.println("Despesas Totais	|	"+getTotalDespesasDia()+"	|			|		|");
+				System.out.println("Despesas Totais	|	"+getDespesaSemana()+"	|			|		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Lucros Totais	|	"+getLucroSemana()+"	|	");
 				System.out.println("________________________________________________________________________");
 				System.out.println("KMs		|");
 				System.out.println("________________________________________________________________________");
-				System.out.println("		|");
+				System.out.println("Preço/KM	|	");
 				System.out.println("________________________________________________________________________");
-		}
+				
+				break;
+			case 3:
+				System.out.println("------Fluxo Médio Mensal-------"			
+						+ "\nGanhos Totais: "+getTotalReceitas()/getMeses()+"\nDespesas Totais: "+getTotalDespesas()/getMeses()+"\nLucro Total Do Dia: "+getLucroMes()+"\nKMs Rodados: ");
+				
+				System.out.println("\n");
+				System.out.println("		|	DIA	|	SEMANA		|	MÊS	|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Ganhos Totais	|	"+getReceitaMes()+"	|			|		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Despesas Totais	|	"+getDespesaMes()+"	|			|		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Lucros Totais	|	"+getLucroMes()+"	|	");
+				System.out.println("________________________________________________________________________");
+				System.out.println("KMs		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Preço/KM	|	");
+				System.out.println("________________________________________________________________________");
+				
+				break;
+			case 4:
+				
+				System.out.println("\n");
+				System.out.println("		|	TOTAL	|	SEMANA		|	MÊS	|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Ganhos Totais	|	"+getTotalReceitas()+"	|			|		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Despesas Totais	|	"+getTotalDespesas()+"	|			|		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Lucros Totais	|	"+getLucrosLiquidos()+"	|	");
+				System.out.println("________________________________________________________________________");
+				System.out.println("KMs		|");
+				System.out.println("________________________________________________________________________");
+				System.out.println("Preço/KM	|	");
+				System.out.println("________________________________________________________________________");
+				break;
+			default:
+				System.out.print("\nOpção inválida! Digite novamente: ");
+			}
 		
 		
 		
