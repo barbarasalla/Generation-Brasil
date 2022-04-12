@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Ganhos {
 	
+	
 	Scanner leia =new Scanner(System.in);
 
 	private double receita;
@@ -109,28 +110,6 @@ public class Ganhos {
 	{
 		setContCorrida(getContCorrida()+1);
 	}
-
-	//Formatando moedas
-	public String formatarReceita()
-	{
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String formatoReceita = nf.format(receita);
-		return formatoReceita;
-	}
-	public String formatarGorjeta()
-	{
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String formatoGorjeta = nf.format(gorjeta);
-		return formatoGorjeta;
-	}
-	
-	//Fim de formatação de moedas
-	public void imprimir()
-	{
-		System.out.println("\nVocê apurou "+this.formatarReceita()+" recebeu "+this.formatarGorjeta()+" de gorjeta e pagou o equivalente.");
-	}
 	
 	public void menuGanhos() {
 		
@@ -141,7 +120,7 @@ public class Ganhos {
 			
 			System.out.println("\t\tGANHOS");
 			System.out.println();
-			System.out.println("1°) Receita da corrida" +"\n2°) Gorgetas"+"\n3°) Voltar ao menu");
+			System.out.println("[1] Receita da corrida" +"\n[2] Gorgetas"+"\n[3] Voltar ao menu");
 			System.out.print("\nOpção: ");
 			ganhos = leia.nextInt();
 			
@@ -151,7 +130,7 @@ public class Ganhos {
 				System.out.print("Insira quanto você lucrou com a corrida: ");
 				c =leia.nextDouble();
 				setReceita(c);
-				System.out.println("\n***************************************************************");
+				System.out.println("\n---------------------------------------------------------------");
 			
 				System.out.println();
 			break;
@@ -160,7 +139,7 @@ public class Ganhos {
 				System.out.print("Insira o quanto você recebeu de gorgeta: ");
 				c =leia.nextDouble();
 				setGorjeta(c);
-				System.out.println("\n***************************************************************");
+				System.out.println("\n----------------------------------------------------------------");
 				
 				System.out.println();
 				break;
@@ -168,14 +147,14 @@ public class Ganhos {
 			case 3:
 				System.out.println("\nVoltando para o menu...");
 				
-				System.out.println("\n***************************************************************");
+				System.out.println("\n-----------------------------------------------------------------");
 			
 				System.out.println();
 				break;
 			
 			default:
 				System.out.println("\nOpção invalido");				
-				System.out.println("\n***************************************************************");
+				System.out.println("\n-----------------------------------------------------------------");
 				System.out.println();
 				break;			
 			}

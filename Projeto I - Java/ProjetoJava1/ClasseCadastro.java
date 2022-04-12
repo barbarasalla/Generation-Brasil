@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ClasseCadastro {
 
+
 		public String nome;
 		public String email;
 		public String senha;
@@ -103,6 +104,8 @@ public class ClasseCadastro {
 
 		public String getSenha() {
 			System.out.println("\nDigite a sua senha: ");
+			
+						
 			senha = leia.nextLine();
 			System.out.println("\nDigite a sua senha novamente: ");
 			confirmar = leia.nextLine();
@@ -186,6 +189,8 @@ public class ClasseCadastro {
 				}
 			}
 			
+			//LOGIN
+			
 			x = 0;
 			for(x=0; x <=20; x++) {
 				System.out.print("--");
@@ -229,7 +234,7 @@ public class ClasseCadastro {
 			
 			while (!senhaLogin.equals(senha))
 			{
-				System.out.println("\nE-mail ou senha inválidos! Faa login novamente! ");
+				System.out.println("\nE-mail ou senha inválidos! Faça login novamente! ");
 				senhaLogin = leia.nextLine();
 				
 			}
@@ -299,7 +304,7 @@ public class ClasseCadastro {
 				
 			
 			System.out.println("\nCONFIGURAÇÕES \n\n"
-					+ "1 - ALTERAR CADASTRO\n2 - ADICIONAR EMPRESA\n3 - SAIR\n");
+					+ "1 - ALTERAR CADASTRO\n2 - SAIR\n");
 			x = leia.nextInt();
 			if(x==1)
 			{
@@ -355,25 +360,33 @@ public class ClasseCadastro {
 			System.out.println(confirmar);
 			
 			}
-			
-			
 		
 			else if(x==2)
 			{
-				System.out.println("\nAdicionar empresa");
-			}
-			
-			else if(x==3)
-			{
 				System.out.println("\nSair");
 			}
-			}	
-			
-			while(confirmar.equals("N"));
+			}while(confirmar.equals("N"));
 	
-
-
 		}
-		
+		public void Cadastrar() 
+		{
+			getNome();
+			getEmail();
+			getSenha();
+			getDdd();
+			getTelefone();
+			cadastroRealizado();
+			facaLogin();
+			getLogin();
+			getSenhaConfirma();
+			bemVinde();
+		}		
+		public void Login() 
+		{
+			facaLogin();
+			getLogin();
+			getSenhaLogin();
+			bemVinde();
+		}
 }
 

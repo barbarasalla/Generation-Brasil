@@ -217,6 +217,7 @@ public class Despesas {
 		String FormOutrasDespesas = nf.format(OutrasDespesas);
 		return FormOutrasDespesas;
 	}
+	
 		
 	public void menuDespesa() 
 	{

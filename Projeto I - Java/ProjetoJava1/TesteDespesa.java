@@ -2,6 +2,7 @@ package ProjetoJava1;
 
 import java.util.Scanner;
 
+
 public class TesteDespesa {
 
 	public static void main(String[] args) {
@@ -15,37 +16,26 @@ Despesas Des = new Despesas(0,0,0,0,0,0);
 Ganhos gan = new Ganhos(0,0);
 Contador contador= new Contador();
 
-double totDespesaDia=0, totGanhosDia=0, LucroDia=0;
 
-int opIniciar, x, dia=0;
+contador.setDias(0);
+
+int opIniciar, x;
 
 do {	
 
 		System.out.println("\nMENU PRINCIPAL: \n\n"
-				+ "1 - CADASTRO\n2 - LOGIN\n3 - CONFIGURAÇÕES\n4 - SAIR DO APLICATIVO");
+				+ "[1] CADASTRO\n[2] LOGIN\n[3] CONFIGURAÇÕES\n[4] SAIR DO APLICATIVO");
 		x = leia.nextInt();
-		
+		System.out.println();
 		if(x==1)
 		{
 	
-			cadastro.getNome();
-			cadastro.getEmail();
-			cadastro.getSenha();
-			cadastro.getDdd();
-			cadastro.getTelefone();
-			cadastro.cadastroRealizado();
-			cadastro.facaLogin();
-			cadastro.getLogin();
-			cadastro.getSenhaConfirma();
-			cadastro.bemVinde();
+			cadastro.Cadastrar();
 		}
 		
 		else if(x==2)
 		{
-			cadastro.facaLogin();
-			cadastro.getLogin();
-			cadastro.getSenhaLogin();
-			cadastro.bemVinde();
+			cadastro.Login();
 		}
 	
 		else if(x==3)
@@ -64,19 +54,18 @@ do {
 				res.ZerarResultados();	//Zerando Resultados Total do DIA no RESULTADO
 				Des.ZerarDespesas();	//Zerando Despesa Total do DIA
 				gan.ZerarGanhos();		//Zerando Ganhos Total do DIA
-				
-				System.out.println(Des.getTotDespesaDia());					//Calculando DESPESA DIA
-				System.out.println(res.getTotalDespesasDia());				
+						
 			}
 		switch(opIniciar) 
 		{
 		
 			case 1:
 				
-				System.out.println("\nSESSÃO INICIADA... Dirija sempre com cuidado!");
+				System.out.println("\nSESSÃO INICIADA... Dirija sempre com cuidado!\n");
+							
 				//Menu interativo com usuário	
 				
-				contador.setDias(1);
+				contador.setDias(contador.getDias()+1);
 				int menu = 1;				
 				do {
 					
@@ -116,13 +105,19 @@ do {
 				
 				
 				gan.totalizarGanhosDia();							//Calculando GANHOS DIA
-				totGanhosDia = gan.getGanhosTotaisDias();
-				res.setTotalReceitasDia(totGanhosDia);				//Aplicando o total de GANHOS do DIA na Classe RESULTADO
+				res.setTotalReceitasDia(gan.getGanhosTotaisDias());				//Aplicando o total de GANHOS do DIA na Classe RESULTADO
 				res.CalcularGanhosTotal();
 				
 				res.CalculoLucroDia();								//Calculando LUCROS DIA	
-				res.CalculoLucroTotal();							//Calcular Lucro Total
+				res.CalculoLucroTotal();							//Calcular Lucro Total	
 				
+				res.setLucroSemana((res.getLucrosLiquidos())/contador.getSemanas());		//Calculos Semanas
+				res.setDespesaSemana((res.getTotalDespesas())/contador.getSemanas());
+				res.setReceitaSemana((res.getTotalReceitas())/contador.getSemanas());
+
+				res.setLucroMes((res.getLucrosLiquidos())/contador.getMeses());				//Calculos Meses
+				res.setDespesaMes((res.getTotalDespesas())/contador.getMeses());
+				res.setReceitaMes((res.getTotalReceitas())/contador.getMeses());
 				
 				break;
 				

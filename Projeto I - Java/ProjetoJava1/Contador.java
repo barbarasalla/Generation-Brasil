@@ -4,45 +4,46 @@ import java.util.Scanner;
 
 public class Contador {
 	
+	private double dias=0;
+	private double semanas=0;
+	private double meses=0;
+	
+
 	Scanner leia= new Scanner(System.in);
+
 	
-	private int dias;
-	private int semanas;
-	private int meses;
-	
-	
-	public int getDias() {
+	public double getDias() {
 		return dias;
 	}
 
-	public void setDias(int dias) {
-		this.dias += dias;
-		if(dias>=7) {
-			contSemanas();
+	public void setDias(double dias) {
+		this.dias = dias;
+		if(dias>=7.0) {
+			double dReal= dias/7;
+			int semanas= (int)dReal;
+			setSemanas(semanas);
+		}
+		if(dias>=30) {
+			double dR= dias/30;
+			int meses= (int)dR;
+			setMeses(meses);
 		}
 	}
 
-	public int getSemanas() {
+	public double getSemanas() {
 		return semanas;
 	}
 
-	public void setSemanas(int semanas) {
+	public void setSemanas(double semanas) {
 		this.semanas = semanas;
 	}
 
-	public int getMeses() {
+	public double getMeses() {
 		return meses;
 	}
 
-	public void setMeses(int meses) {
+	public void setMeses(double meses) {
 		this.meses = meses;
 	}
 	
-	public void contSemanas() {
-		setSemanas(getDias()%7);
-	}
-	
-	public void contMeses() {
-		setMeses(getDias()%30);
-	}
 }
