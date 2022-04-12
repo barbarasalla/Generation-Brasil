@@ -1,9 +1,7 @@
-package ProjetoJava1;
-
 import java.util.Scanner;
 
 
-public class TesteDespesa {
+public class ProjetoGen {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -86,7 +84,8 @@ do {
 							Des.menuDespesa();
 							break;
 						case 3:
-							System.out.print("\nAo encerrar sessão o controle diário será encerrado. Tem certeza que deseja fazer isso? ");
+							System.out.print("\nEncerrando a sessão ");
+							break;
 							
 						default:
 							System.out.print("\nOpção invalido! Digite novamente: ");			

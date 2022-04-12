@@ -1,5 +1,3 @@
-package ProjetoJava1;
-
 import java.text.NumberFormat;
 import java.util.Scanner;
 
@@ -223,6 +221,7 @@ public class Resultados extends Contador {
 				break;
 			default:
 				System.out.print("\nOpção inválida! Digite novamente: ");
+				break;
 			}
 		
 		

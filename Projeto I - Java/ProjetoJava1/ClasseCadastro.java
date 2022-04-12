@@ -1,5 +1,3 @@
-package ProjetoJava1;
-
 import java.util.Scanner;
 
 public class ClasseCadastro {
@@ -363,9 +361,9 @@ public class ClasseCadastro {
 		
 			else if(x==2)
 			{
-				System.out.println("\nSair");
+				System.out.println("\nSaindo...");
 			}
-			}while(confirmar.equals("N"));
+			}while(x != 2);
 	
 		}
 		public void Cadastrar() 
@@ -389,4 +387,3 @@ public class ClasseCadastro {
 			bemVinde();
 		}
 }
-

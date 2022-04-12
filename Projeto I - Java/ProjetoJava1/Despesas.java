@@ -1,5 +1,3 @@
-package ProjetoJava1;
-
 import java.util.Scanner;
 
 public class Despesas {
