@@ -11,11 +11,10 @@ public class TesteDespesa {
 Scanner leia = new Scanner(System.in);
 
 ClasseCadastro cadastro = new ClasseCadastro();	
-Resultados res = new Resultados(0,0,0,0,0);
+Resultados res = new Resultados(0,0,0);
 Despesas Des = new Despesas(0,0,0,0,0,0);
 Ganhos gan = new Ganhos(0,0);
 Contador contador= new Contador();
-
 
 contador.setDias(0);
 

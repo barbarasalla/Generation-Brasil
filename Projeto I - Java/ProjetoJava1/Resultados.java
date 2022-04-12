@@ -7,17 +7,14 @@ public class Resultados extends Contador {
 	
 	Scanner leia= new Scanner(System.in);
 	
-	private double totalReceitasDia, totalDespesasDia, lucrosLiquidosDia, kmRodadosDia, combustivelGastoDia, 
-	totalReceitas, totalDespesas, lucrosLiquidos, kmRodados, combustivelGasto, lucroSemana, lucroMes, 
+	private double totalReceitasDia, totalDespesasDia, lucrosLiquidosDia, totalReceitas, totalDespesas, lucrosLiquidos, lucroSemana, lucroMes, 
 	despesaSemana, despesaMes, receitaSemana, receitaMes;
 		
-	public Resultados(double totalReceitasDia, double totalDespesasDia, double lucrosLiquidosDia, double kmRodadosDia, double combustivelGastoDia) {
+	public Resultados(double totalReceitasDia, double totalDespesasDia, double lucrosLiquidosDia) {
 		
 			this.totalReceitasDia = totalReceitasDia;
 			this.totalDespesasDia = totalDespesasDia;
 			this.lucrosLiquidosDia = lucrosLiquidosDia;
-			this.kmRodadosDia = kmRodadosDia;
-			this.combustivelGastoDia = combustivelGastoDia;
 	}	
 
 	//RESULTADO DIA:
@@ -70,40 +67,6 @@ public class Resultados extends Contador {
 
 	public void setLucrosLiquidos(double lucrosLiquidos) {
 		this.lucrosLiquidos = lucrosLiquidos;
-	}
-	
-	//CONTROLE KM (DIA, TOTAL, SEMANA E MES)
-	
-	public double getKmRodadosDia() {
-		return kmRodadosDia;
-	}
-
-	public void setKmRodadosDia(double kmRodadosDia) {
-		this.kmRodadosDia = kmRodadosDia;
-	}
-
-	public double getCombustivelGastoDia() {
-		return combustivelGastoDia;
-	}
-
-	public void setCombustivelGastoDia(double combustivelGastoDia) {
-		this.combustivelGastoDia = combustivelGastoDia;
-	}
-
-	public double getKmRodados() {
-		return kmRodados;
-	}
-
-	public void setKmRodados(double kmRodados) {
-		this.kmRodados = kmRodados;
-	}
-
-	public double getCombustivelGasto() {
-		return combustivelGasto;
-	}
-
-	public void setCombustivelGasto(double combustivelGasto) {
-		this.combustivelGasto = combustivelGasto;
 	}
 	
 	//CONTROLE TEMPORAL (SEMANA E MES)
@@ -182,8 +145,6 @@ public class Resultados extends Contador {
 		setTotalReceitasDia(0);
 		setTotalDespesasDia(0);
 		this.totalDespesasDia=0;
-		this.kmRodadosDia = 0;
-		this.combustivelGastoDia = 0;
 	}
 	
 	public String FormatarValores(double valor) {

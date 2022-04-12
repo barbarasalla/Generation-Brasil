@@ -1,7 +1,6 @@
 package ProjetoJava1;
 
 import java.util.Scanner;
-import java.text.NumberFormat;
 
 public class Despesas {
 	
@@ -173,51 +172,7 @@ public class Despesas {
 		setLimpezaDia(0);
 		setAlimentacaoDia(0);
 		setOutrasDespesasDia(0);	
-	}
-	
-	
-	public String FormCombustivel() {
-		
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String FormCombustivel = nf.format(Combustivel);
-		return FormCombustivel;	
-		
-	}
-	
-	public String FormManutencao() {
-		
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String FormManutencao = nf.format(Manutencao);
-		return FormManutencao;
-		
-	}
-	
-	public String FormLimpeza() {
-		
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String FormLimpeza = nf.format(Limpeza);
-		return FormLimpeza;
-	}
-	
-	public String FormAlimentacao() {
-		
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String FormAlimentacao = nf.format(Alimentacao);
-		return FormAlimentacao;
-	}
-
-	public String FormOutrasDespesas() {
-		
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		nf.setMinimumFractionDigits(2);
-		String FormOutrasDespesas = nf.format(OutrasDespesas);
-		return FormOutrasDespesas;
-	}
-	
+	}	
 		
 	public void menuDespesa() 
 	{
@@ -241,7 +196,7 @@ public class Despesas {
 					System.out.print("Insira o gasto com combustivel: ");
 					c =leia.nextDouble();
 					setCombustivel(c);
-					System.out.println("\n***************************************************************");
+					System.out.println("\n-------------------------------------------------------------");
 					System.out.println();
 					break;
 
@@ -255,7 +210,7 @@ public class Despesas {
 					System.out.print("Insira o valor gasto: ");
 					m =leia.nextDouble();
 					setManutencao(m);
-					System.out.println("\n***************************************************************");
+					System.out.println("\n--------------------------------------------------------------");
 					
 					System.out.println();
 					break;
@@ -266,7 +221,7 @@ public class Despesas {
 					System.out.print("Insira o valor gasto com limpeza: ");
 					c =leia.nextDouble();
 					setLimpeza(c);
-					System.out.println("\n***************************************************************");
+					System.out.println("\n---------------------------------------------------------------");
 					
 					System.out.println();
 					break;
@@ -276,7 +231,7 @@ public class Despesas {
 					System.out.print("Insira o valor gasto com alimentação: ");
 					c =leia.nextDouble();
 					setAlimentacao(c);
-					System.out.println("\n***************************************************************");
+					System.out.println("\n----------------------------------------------------------------");
 					
 					System.out.println();
 					break;
@@ -291,21 +246,21 @@ public class Despesas {
 					tipoDeMan[man] = leia.nextLine();     
 					man++;
 					
-					System.out.println("\n***************************************************************");
+					System.out.println("\n----------------------------------------------------------------");
 					System.out.println();
 					break;
 				
 				
 				case 6:
 					System.out.println("\nVoltando para o menu...");
-					System.out.println("\n***************************************************************");
+					System.out.println("\n-----------------------------------------------------------------");
 					System.out.println();
 					break;
 				
 				
 				default:
 					System.out.println("\nOpção invalido");
-					System.out.println("\n***************************************************************");
+					System.out.println("\n-----------------------------------------------------------------");
 					System.out.println();
 					break;
 				
