@@ -23,4 +23,3 @@ select * from tb_funcionarios where salario<2000.00;
 
 #atualizações
 update tb_funcionarios set salario = 1900.00 where id =3;
-
