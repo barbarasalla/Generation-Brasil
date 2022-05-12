@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CategoryRepository extends JpaRepository <CategoryModel, Long> {
 
-	public List<CategoryModel> findAllByNameCategoryContainingIgnoreCase(@Param("name") String name);
+	public List<CategoryModel> findAllByNameContainingIgnoreCase(@Param("name") String name);
 }
