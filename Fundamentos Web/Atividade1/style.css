@@ -1,0 +1,64 @@
+.center{
+    text-align: center;
+    align-items: center;
+}
+.text{
+    color: rgb(15, 15, 15);
+    text-align: justify;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.img{
+    border-radius: 50%;
+    width: 300px;
+    height: 250px;
+    padding: 30px;
+}
+
+.container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+};
+
+#nav{
+    text-decoration: none;
+}
+
+#nav li{
+    display: inline;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#nav li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+#nav li a:hover{
+    color: gray;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.tm{
+    width: 50px;
+    height: 50px;
+    padding: 30px;
+}
+
+/*Estilização folha de contato: */
+
+.ml-50{
+    margin-left: 50px;
+}
+
+.form{
+    margin-top: 100px;
+}
