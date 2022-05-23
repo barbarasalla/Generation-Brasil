@@ -55,7 +55,6 @@ body {
 
 .sobre img:hover {
   opacity: 1;
-  /* voltando a opacidade da imagem pra 100% */
 }
 
 .video {
@@ -87,7 +86,6 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  /* colocar um espaçamento maior entre as letras do texto, muito usado para criar um ponto de interesse no design */
   color: var(--background-color);
   font-weight: 600;
 }
