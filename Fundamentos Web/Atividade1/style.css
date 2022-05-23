@@ -1,64 +1,203 @@
-.center{
-    text-align: center;
-    align-items: center;
-}
-.text{
-    color: rgb(15, 15, 15);
-    text-align: justify;
-    align-items: center;
-    padding: 10px;
-    margin-right: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-.img{
-    border-radius: 50%;
-    width: 300px;
-    height: 250px;
-    padding: 30px;
+:root {
+    --main-color: #6d4ea7;
+    --primary-color: #7869d1;
+    --background-color: #e8eeeb;
+    --selection-color: rgb(179, 171, 128);
 }
 
-.container{
+body {
+    background-color: var(--background-color);
+}
+
+.sobre {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
+    width: 80vw;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.text {
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-};
+    gap: 1.25rem;
+    width: 60%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    user-select: none;
+}
+.text ul li{
+    text-decoration: none;
+    list-style: none;
+    gap: 2rem;
+}
 
-#nav{
+.img {
+    width: max(30%, 350px);
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px dashed var(--main-color);
+    padding: 2px;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+.sobre img:hover {
+    opacity: 1;
+    /* voltando a opacidade da imagem pra 100% */
+}
+
+.video {
+    margin-top: 5rem;
+  }
+
+  .video1 {
+    width: 50vw;
+    aspect-ratio: 16/9; 
+    margin: 0.75rem auto;
+    display: block;
+    border-radius: 1rem;
+  }
+
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
     text-decoration: none;
 }
 
-#nav li{
-    display: inline;
-    padding: 15px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav ul li a {
     text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    /* colocar um espaçamento maior entre as letras do texto, muito usado para criar um ponto de interesse no design */
+    color: var(--background-color);
+    font-weight: 600;
 }
 
-#nav li a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+nav ul li a:hover {
+    color: var(--selection-color);
 }
 
-#nav li a:hover{
-    color: gray;
+.active {
+    text-decoration: underline;
 }
 
-.mb-50{
-    margin-bottom: 50px;
+main h1 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.tm{
-    width: 50px;
-    height: 50px;
-    padding: 30px;
+h1,
+h2 {
+    color: var(--primary-color);
+    text-align: center;
 }
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+footer {
+    margin: 1rem 0;
+    border-top: 1px solid;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+footer a img{
+    width: max(2%, 50px);
+}
+
+  footer span {
+    font-weight: 600;
+    color: var(--main-color);
+  }
 
 /*Estilização folha de contato: */
 
-.ml-50{
-    margin-left: 50px;
-}
+.contato {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+    min-height: 78vh;
+    width: 75%;
+    margin: 0 auto;
+  }
 
-.form{
-    margin-top: 100px;
-}
+  .contato form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contato label,
+  .contato p {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.275rem;
+  }
+  
+  .contato input, .contato textarea {
+    width: 100%;
+    resize: none;
+    border: 0;
+    padding: 0.2rem;
+    font-size: 1.075rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-bottom: 2px solid;
+  }
+  
+  .contato button {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 1.275rem;
+    font-weight: 600;
+    width: max(50%, 150px);
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+  }
+  
+  .contato button:hover {
+    color: var(--selection-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+  .contato h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .mapa {
+    width: max(40vw, 500px);
+    height: auto;
+    aspect-ratio: 16/9;
+  }
