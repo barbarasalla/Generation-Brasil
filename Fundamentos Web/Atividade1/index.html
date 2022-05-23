@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Perfil</title>
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
     <ul>
-        <li> <a href="index.html">Home</a> </li>
-        <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="contato.html">Contato</a></li>
     </ul>
+    </nav>
+    <main>
+      <h1>O Mundo de Tieta</h1>
 
-    <h1>Sobre Bárbara</h1>
-    <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quis totam earum corrupti cum esse dicta fugit itaque laudantium voluptas, inventore quos mollitia aperiam provident doloremque unde ea. Blanditiis, atque.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos numquam optio aperiam porro veniam odit, alias dicta eum, distinctio sit culpa quod inventore ipsam? Quaerat id unde at corrupti impedit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos numquam optio aperiam porro veniam odit, alias dicta eum, distinctio sit culpa quod inventore ipsam? Quaerat id unde at corrupti impedit!
-    </p>
-    <P>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos numquam optio aperiam porro veniam odit, alias dicta eum, distinctio sit culpa quod inventore ipsam? Quaerat id unde at corrupti impedit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos numquam optio aperiam porro veniam odit, alias dicta eum, distinctio sit culpa quod inventore ipsam? Quaerat id unde at corrupti impedit!
-    </p>
-
-    <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.2135168:1590238106/image.jpg?h=630&q=0.6&w=1200&$p$h$q$w=f76cc5e.jpg" alt="Foto de perfil">
-
-    <h2>Meu vídeo predileto: </h2>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/duiOX7aYDPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        <!--pedaço de site dentro-->
-
+      <section class="sobre">
+        <img
+          class="img"
+          src="/imgs/tieta1.jpeg"
+          alt="Foto de perfil"
+        />
+        <div class="text">
+          <p>
+            Olá, meu nome é Antonieta, mas todos me chamam de tieta. Tenho 9 anos e sou uma cadelinha dachshund. Amo passear, biscoitinhos e ficar na janela observando a rua. Meu aniversário é 17 de maio e aceito petiscos enviados por vocês(meu endereço está na aba de contato). Sejam bem-vindes ao meu blog, aqui você pode encontrar algumas informações sobre mim.
+          </p>
     
-</body>
+        </br>
+          Minhas Características:
+          <ul>
+            <li>Raça: Dachshund</li>
+            <li>Peso: 6kg</li>
+            <li>Tipo de Pelo: Curto</li>
+            <li>O que eu gosto: Minha família, dormir e comer</li>
+            <li>O que eu odeio: Meus vizinhos, entregadores, crianças e outros bichinhos</li>            
+          </ul>
+            
+          </p>
+        </div>
+      </section>
+      <section class="video">
+        <h2>Meu vídeo predileto:</h2>
+        <iframe class="video1" width="560" height="315" src="https://www.youtube.com/embed/YQ404vwjzus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        ><!--pedaço de site dentro-->
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://www.linkedin.com/in/barbara-salla/" target="_blank">
+        <img class="tm" src="/imgs/linkedin.png" alt="Logo do Linkedin" />
+      </a>
+      <p class="center">Todos os direitos reservados: <span>Bárbara Salla &copy; - 2022</span> </p>
+    </footer>
+    <script src="/script/script.js"></script>
+  </body>
 </html>
